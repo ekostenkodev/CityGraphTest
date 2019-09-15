@@ -6,8 +6,8 @@ TextureImporter:
       213: 7092786493233693112
     second: hospital
   - first:
-      213: 3554723517605164774
-    second: post office
+      213: 5238932169999410272
+    second: postOffice
   - first:
       213: 4173208977716895840
     second: police
@@ -51,7 +51,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -134,10 +134,10 @@ TextureImporter:
       name: hospital
       rect:
         serializedVersion: 2
-        x: 7
-        y: 3
-        width: 396
-        height: 490
+        x: 24
+        y: 86
+        width: 507
+        height: 577
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13ab3314cda739f4cbeb9169f238ab1f
+      spriteID: 0dafafd85b344464883b5a0764390dba
       internalID: 7092786493233693112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: post office
+      name: postOffice
       rect:
         serializedVersion: 2
-        x: 456
-        y: 3
-        width: 461
-        height: 450
+        x: 552
+        y: 89
+        width: 580
+        height: 574
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bf9aca032895cd4ab4d6f3f696edad7
-      internalID: 3554723517605164774
+      spriteID: 7cbc034e2cec968469c33fbed1df9961
+      internalID: 5238932169999410272
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: police
       rect:
         serializedVersion: 2
-        x: 954
-        y: 3
-        width: 495
-        height: 483
+        x: 1177
+        y: 85
+        width: 582
+        height: 581
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,7 +187,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 067b2b79ae857904f98e84312c9ffb01
+      spriteID: e0d4c92a8e64a884a8cfe71065b5741d
       internalID: 4173208977716895840
       vertices: []
       indices: 

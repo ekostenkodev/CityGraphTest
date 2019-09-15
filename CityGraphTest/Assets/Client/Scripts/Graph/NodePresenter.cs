@@ -7,20 +7,22 @@ using UnityEngine.Events;
 [RequireComponent(typeof(SpriteRenderer),typeof(BoxCollider2D))]
 public class NodePresenter : MonoBehaviour
 {
+    private Transform _selfTransform;
+    private SpriteRenderer _spriteRenderer;
+
     private Node _node;
-    public Node Node=>_node;
     
-    public event UnityAction<Node> NodeClick = delegate {}; 
+    #region MonoBehaviour
     
     private void Awake()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         _selfTransform = GetComponent<Transform>();
     }
-        
-    private Transform _selfTransform;
     
-
-
+    #endregion
+        
+    
     private void OnMouseDown()
     {
         InputSystem.Instance.SetStartNode(_node);
@@ -30,8 +32,10 @@ public class NodePresenter : MonoBehaviour
     {
         _node = node;
         _selfTransform.localPosition = node.Position;
-        var spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = node.Institution.Sprite;
-        GetComponent<BoxCollider2D>().size = spriteRenderer.size;
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer.sprite = node.Institution.Sprite;
+        GetComponent<BoxCollider2D>().size = _spriteRenderer.size;
     }
+    
+
 }

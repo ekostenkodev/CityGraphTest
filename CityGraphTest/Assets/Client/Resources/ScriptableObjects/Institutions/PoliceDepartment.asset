@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PoliceDepartment
   m_EditorClassIdentifier: 
   Sprite: {fileID: 4173208977716895840, guid: 1a718351271046d4ba6c50381a4fa885, type: 3}
+  _name: "\u041F\u043E\u043B\u0438\u0446\u0435\u0439\u0441\u043A\u0438\u0439 \u0443\u0447\u0430\u0441\u0442\u043E\u043A"

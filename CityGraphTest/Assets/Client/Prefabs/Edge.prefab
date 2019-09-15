@@ -93,5 +93,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a51de76f70bf1c4c855cacd8e62f0ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Point1: {x: 0, y: 0}
-  Point2: {x: 0, y: 0}
+  _defaultMaterial: {fileID: 2100000, guid: 67c797bc9694a3f43b914f50cf9d26da, type: 2}
+  _selectedMaterial: {fileID: 2100000, guid: 738f92f6e159464468e55c9243de81ba, type: 2}

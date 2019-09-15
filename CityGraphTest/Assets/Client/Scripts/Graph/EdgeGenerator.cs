@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class EdgeGenerator : MonoBehaviour
 {
     [SerializeField] private EdgePresenter _edgePresenterPrefab;
-    private Dictionary<Edge,EdgePresenter> _edges = new Dictionary<Edge,EdgePresenter>(); // все ветви, которые существуют
-    public IEnumerable<Edge> Edges => _edges.Keys.ToList();
+    private List<Edge> _edges = new List<Edge>(); // все ветви, которые существуют // todo убрать
+    public IEnumerable<Edge> Edges => _edges.ToList();
 
     public void SplitEdge(Edge edge, Node newNode)
     {
@@ -39,7 +36,7 @@ public class EdgeGenerator : MonoBehaviour
         node1.Edges.Add(edge);
         node2.Edges.Add(edge);
             
-        _edges.Add(edge,edgePresenter);
+        _edges.Add(edge);
     }
 
     public void ClearEdges()

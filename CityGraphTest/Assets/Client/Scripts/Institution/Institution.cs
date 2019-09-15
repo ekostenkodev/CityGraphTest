@@ -7,6 +7,6 @@ using UnityEngine.UI;
 public abstract class Institution : ScriptableObject
 {
     public Sprite Sprite;
-
-    public abstract Type Type { get; }
+    [SerializeField] private string _name;
+    public string Name => _name;
 }

@@ -1,35 +1,37 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class NodeGenerator : MonoBehaviour
 {
-    
     [SerializeField] private NodePresenter _nodePresenterPrefab;
-    private Dictionary<Node,NodePresenter> _nodes = new Dictionary<Node,NodePresenter> ();
+    private List<Node> _nodes = new List<Node> ();
     private Institution[] _institutions;
+    
+    #region MonoBehaviour
+    
     private void Start()
     {
         _institutions = Resources.LoadAll<Institution>("ScriptableObjects/Institutions"); 
     }
+    #endregion
 
     public Node CreateNode(Vector2 point)
     {
         // если на этой позиции есть узел, то новый создавать не нужно, просто берем существующий
         // можно, при желании, сделать поиск близжайшего узла, чтобы все узлы в определенном радиусе объединялись 
-        Node existNode = _nodes.FirstOrDefault(n => n.Key.Position == point).Key;
+        Node existingNode = _nodes.FirstOrDefault(n => n.Position == point);
 
-        if (existNode != null)
+        if (existingNode != null)
         {
-           return existNode;
+           return existingNode;
         }
 
         Node node = new Node(_institutions[Random.Range(0,_institutions.Length)],point);
         var nodePresenter = Instantiate(_nodePresenterPrefab,transform);
         nodePresenter.SetNode(node);
         
-        _nodes.Add(node,nodePresenter);
+        _nodes.Add(node);
 
         return node;
 
@@ -43,4 +45,6 @@ public class NodeGenerator : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
+
+
 }

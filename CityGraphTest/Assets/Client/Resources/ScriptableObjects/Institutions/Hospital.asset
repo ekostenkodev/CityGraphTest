@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Hospital
   m_EditorClassIdentifier: 
   Sprite: {fileID: 7092786493233693112, guid: 1a718351271046d4ba6c50381a4fa885, type: 3}
+  _name: "\u0411\u043E\u043B\u044C\u043D\u0438\u0446\u0430"

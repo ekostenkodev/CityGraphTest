@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Admin\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Admin\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_CityGraphTest.-1296364852.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Admin\Documents\GitHub\CityGraphTest\CityGraphTest" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Client" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="City" t="Include">
+              <e p="CityGenerator.cs" t="Include" />
+              <e p="Dijkstra.cs" t="Include" />
+              <e p="Math2D.cs" t="Include" />
+              <e p="Navigator.cs" t="Include" />
+              <e p="Road.cs" t="Include" />
+            </e>
+            <e p="Graph" t="Include">
+              <e p="Edge.cs" t="Include" />
+              <e p="EdgeGenerator.cs" t="Include" />
+              <e p="EdgePresenter.cs" t="Include" />
+              <e p="Node.cs" t="Include" />
+              <e p="NodeGenerator.cs" t="Include" />
+              <e p="NodePresenter.cs" t="Include" />
+            </e>
+            <e p="Institution" t="Include">
+              <e p="Hospital.cs" t="Include" />
+              <e p="Institution.cs" t="Include" />
+              <e p="PoliceDepartment.cs" t="Include" />
+              <e p="PostOffice.cs" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="InputSystem.cs" t="Include" />
+              <e p="Menu.cs" t="Include" />
+              <e p="SelectionPanel.cs" t="Include" />
+              <e p="Singleton.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CityGraphTest.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
