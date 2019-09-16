@@ -7,6 +7,14 @@ public class EdgeGenerator : MonoBehaviour
     [SerializeField] private EdgePresenter _edgePresenterPrefab;
     private List<Edge> _edges = new List<Edge>(); // все ветви, которые существуют // todo убрать
     public IEnumerable<Edge> Edges => _edges.ToList();
+    
+    private Transform _selfTransform;
+
+    private void Awake()
+    {
+        _selfTransform = GetComponent<Transform>();
+    }
+
 
     public void SplitEdge(Edge edge, Node newNode)
     {
@@ -30,7 +38,7 @@ public class EdgeGenerator : MonoBehaviour
     {
         Edge edge = new Edge(node1,node2);
         
-        var edgePresenter = Instantiate(_edgePresenterPrefab,transform);
+        var edgePresenter = Instantiate(_edgePresenterPrefab, _selfTransform);
         edgePresenter.SetEdge(edge);
         
         node1.Edges.Add(edge);
