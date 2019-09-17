@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30f44416-54fd-44cf-b8e9-8316e28746fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityGraphTest/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityGraphTest/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CityGraphTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CityGraphTest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/City/CityGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/City/CityGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/City/Math2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/City/Math2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/City/Navigator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/City/Navigator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/Edge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/Edge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/EdgeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/EdgeGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/EdgePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/EdgePresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/NodeGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/NodeGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/NodePresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Graph/NodePresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/Hospital.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/Hospital.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/Institution.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/Institution.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/PoliceDepartment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/PoliceDepartment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/PostOffice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/Institution/PostOffice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/UI/InputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/UI/InputSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/UI/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/UI/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/UI/SelectionPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/UI/SelectionPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Client/Scripts/UI/Singleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Client/Scripts/UI/Singleton.cs" afterDir="false" />
-    </list>
+    <list default="true" id="30f44416-54fd-44cf-b8e9-8316e28746fd" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,12 +278,12 @@
       <option name="presentableId" value="Default" />
       <updated>1568463965221</updated>
       <workItem from="1568463968026" duration="21015000" />
-      <workItem from="1568718203687" duration="1402000" />
+      <workItem from="1568718203687" duration="2002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22417000" />
+    <option name="totallyTimeSpent" value="23017000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
