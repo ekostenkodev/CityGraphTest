@@ -5,17 +5,30 @@ using UnityEngine;
 public class EdgeGenerator : MonoBehaviour
 {
     [SerializeField] private EdgePresenter _edgePresenterPrefab;
-    private List<Edge> _edges = new List<Edge>(); // все ветви, которые существуют // todo убрать
+    private Transform _selfTransform;
+    private List<Edge> _edges = new List<Edge>(); // все ветви, которые существуют
+    
     public IEnumerable<Edge> Edges => _edges.ToList();
+
+    #region MonoBehaviour
+
+    private void Awake()
+    {
+        _selfTransform = GetComponent<Transform>();
+    }
+    
+    #endregion
 
     public void SplitEdge(Edge edge, Node newNode)
     {
         // обращаемся к узлам старой ветви
         var node1 = edge.Node1;
         var node2 = edge.Node2;
-        
+            
         if (node1.Position == newNode.Position || node2.Position == newNode.Position)
+        {
             return;
+        }
 
         edge.Remove();
 
@@ -30,7 +43,7 @@ public class EdgeGenerator : MonoBehaviour
     {
         Edge edge = new Edge(node1,node2);
         
-        var edgePresenter = Instantiate(_edgePresenterPrefab,transform);
+        var edgePresenter = Instantiate(_edgePresenterPrefab,_selfTransform);
         edgePresenter.SetEdge(edge);
         
         node1.Edges.Add(edge);
@@ -42,7 +55,7 @@ public class EdgeGenerator : MonoBehaviour
     public void ClearEdges()
     {
         _edges.Clear();
-        foreach (Transform child in transform)
+        foreach (Transform child in _selfTransform)
         {
             Destroy(child.gameObject);
         }

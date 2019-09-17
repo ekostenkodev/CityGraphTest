@@ -10,7 +10,7 @@ public class CityGenerator : MonoBehaviour
 
     public void GenerateCity(int roadCount)
     {
-        var _startRoads = new Road[]
+        var _startRoads = new []
         {
             new Road(new Vector2(0, 0), new Vector2(0, _height)),
             new Road(new Vector2(0, _height), new Vector2(_width, _height)),
@@ -40,7 +40,7 @@ public class CityGenerator : MonoBehaviour
         int rectangleEdge2;
         do  { rectangleEdge2 = Random.Range(0, 4); } while (rectangleEdge2==rectangleEdge1); // делаем так, чтобы стороны были разными
 
-        var point1 = Vector2.Lerp(roads[rectangleEdge1].Point1, roads[rectangleEdge1].Point2,Random.Range(.1f,.9f));
+        var point1 = Vector2.Lerp(roads[rectangleEdge1].Point1, roads[rectangleEdge1].Point2,Random.Range(.1f,.9f)); // 0.1f-0.9f, чтобы точки были подальше от углов прямоугольника
         var point2 = Vector2.Lerp(roads[rectangleEdge2].Point1, roads[rectangleEdge2].Point2,Random.Range(.1f,.9f));
 
         CreateEdgeOnRoad(new Road(point1,point2));
@@ -58,31 +58,30 @@ public class CityGenerator : MonoBehaviour
                 road.Point2, 
                 edge.Node1.Position,
                 edge.Node2.Position, 
-                out Vector2 point))
+                out Vector2 intersectionPoint))
             {
 
                 // пересечение есть, значит на месте пересечения ставим новый узел
-                var newNode = _nodeGenerator.CreateNode(point);
+                var newNode = _nodeGenerator.CreateNode(intersectionPoint);
                 // делим пересеченую ветвь на две части
                 _edgeGenerator.SplitEdge(edge,newNode);
 
-
-                if (road.Point1 == point)
+                // если пересечение призошло в начале/конце создаваемой дороги
+                if (road.Point1 == intersectionPoint)
                 {
                     node1 = newNode;
                     continue;
                 }
 
-                if (road.Point2 == point)
+                if (road.Point2 == intersectionPoint)
                 {
                     node2 = newNode;
                     continue;
                 }
 
-
                 // продолжаем строить дорогу на оставшихся участках (с помощью рекурсии)
-                CreateEdgeOnRoad(new Road(road.Point1, point));
-                CreateEdgeOnRoad(new Road(road.Point2, point));
+                CreateEdgeOnRoad(new Road(road.Point1, intersectionPoint));
+                CreateEdgeOnRoad(new Road(road.Point2, intersectionPoint));
                 
                 // покидаем метод, тк дорога уже разделена и ее достраивает рекурсия
                 return;

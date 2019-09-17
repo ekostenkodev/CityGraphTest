@@ -5,15 +5,18 @@ using UnityEngine;
 public class NodeGenerator : MonoBehaviour
 {
     [SerializeField] private NodePresenter _nodePresenterPrefab;
+    private Transform _selfTransform;
     private List<Node> _nodes = new List<Node> ();
     private Institution[] _institutions;
-    
+
     #region MonoBehaviour
     
-    private void Start()
+    private void Awake()
     {
+        _selfTransform = GetComponent<Transform>();
         _institutions = Resources.LoadAll<Institution>("ScriptableObjects/Institutions"); 
     }
+    
     #endregion
 
     public Node CreateNode(Vector2 point)
@@ -28,19 +31,18 @@ public class NodeGenerator : MonoBehaviour
         }
 
         Node node = new Node(_institutions[Random.Range(0,_institutions.Length)],point);
-        var nodePresenter = Instantiate(_nodePresenterPrefab,transform);
+        var nodePresenter = Instantiate(_nodePresenterPrefab,_selfTransform);
         nodePresenter.SetNode(node);
         
         _nodes.Add(node);
 
         return node;
-
     }
 
     public void ClearNodes()
     {
         _nodes.Clear();
-        foreach (Transform child in transform)
+        foreach (Transform child in _selfTransform)
         {
             Destroy(child.gameObject);
         }

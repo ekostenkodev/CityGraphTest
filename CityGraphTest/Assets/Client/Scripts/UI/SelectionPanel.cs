@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +9,6 @@ public class SelectionPanel : MonoBehaviour
     [SerializeField] private Dropdown _dropdown;
     [SerializeField] private Text _startNode;
     private Institution[] _institutions;
-    
 
     #region MonoBehaviour
 
@@ -23,7 +22,6 @@ public class SelectionPanel : MonoBehaviour
         FillDropdownList();
 
         _dropdown.onValueChanged.AddListener(DropdownValueChanged);
-
     }
 
     #endregion
@@ -31,7 +29,7 @@ public class SelectionPanel : MonoBehaviour
     private void ClearFields()
     {
         _dropdown.value = 0;
-        _startNode.text = "";
+        _startNode.text = String.Empty;
     }
 
     

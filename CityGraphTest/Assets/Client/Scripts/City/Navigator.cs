@@ -19,6 +19,7 @@ public class Navigator : MonoBehaviour
     {
         _transform = GetComponent<Transform>();
         _lineRenderer = GetComponent<LineRenderer>();
+        
         InputSystem.Instance.StartNodeSetted += SetStartNode;
         InputSystem.Instance.TargetInstitutionSetted += SetTargetInstitution;
     }
@@ -41,14 +42,12 @@ public class Navigator : MonoBehaviour
     public void SetStartNode(Node node)
     {
         StartNode = node;
-        
         GenerateTrack();
     }
 
     public void SetTargetInstitution(Type type)
     {
         TargetInstitution = type;
-        
         GenerateTrack();
     }
 

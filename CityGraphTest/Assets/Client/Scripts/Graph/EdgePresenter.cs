@@ -13,9 +13,7 @@ public class EdgePresenter : MonoBehaviour
         _edgeSprite.drawMode = SpriteDrawMode.Tiled;
     }
 
-
     #endregion
-
     
     public void SetEdge(Edge edge)
     {

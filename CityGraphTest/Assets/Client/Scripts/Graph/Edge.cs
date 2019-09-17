@@ -3,10 +3,10 @@ using UnityEngine.Events;
 
 public class Edge 
 {
-    public event UnityAction EdgeRemoved = delegate { };
-    
     private Node _node1;
     private Node _node2;
+    
+    public event UnityAction EdgeRemoved = delegate { };
     public Node Node1 => _node1;
     public Node Node2 => _node2;
 

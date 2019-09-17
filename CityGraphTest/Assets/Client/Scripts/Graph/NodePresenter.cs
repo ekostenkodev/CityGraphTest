@@ -9,7 +9,6 @@ public class NodePresenter : MonoBehaviour
 {
     private Transform _selfTransform;
     private SpriteRenderer _spriteRenderer;
-
     private Node _node;
     
     #region MonoBehaviour
@@ -20,13 +19,12 @@ public class NodePresenter : MonoBehaviour
         _selfTransform = GetComponent<Transform>();
     }
     
-    #endregion
-        
-    
     private void OnMouseDown()
     {
         InputSystem.Instance.SetStartNode(_node);
     }
+    
+    #endregion
 
     public void SetNode(Node node)
     {
@@ -36,6 +34,4 @@ public class NodePresenter : MonoBehaviour
         _spriteRenderer.sprite = node.Institution.Sprite;
         GetComponent<BoxCollider2D>().size = _spriteRenderer.size;
     }
-    
-
 }
