@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer),typeof(BoxCollider2D))]
 public class NodePresenter : MonoBehaviour

@@ -7,18 +7,13 @@ public class Dijkstra
     {
         public List<Node> NodeMap = new List<Node>();
         
-        public Node Node;
+        public readonly Node Node;
         public float Length;
 
         public Vertex(Node node, float length)
         {
             Node = node;
             Length = length;
-        }
-
-        public override string ToString()
-        {
-            return Node.Position + "  " + Length;
         }
     }
 
@@ -32,8 +27,6 @@ public class Dijkstra
 
         vertexOrder.Add(startVertex);
         
-        
-
         while (vertexOrder.Count != 0)
         {
             var pastVertex = vertexOrder[0];
@@ -76,7 +69,6 @@ public class Dijkstra
         }
 
         return passedVertex;
-
     }
     
 }

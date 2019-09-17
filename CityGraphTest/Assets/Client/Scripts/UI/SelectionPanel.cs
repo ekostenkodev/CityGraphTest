@@ -8,6 +8,7 @@ public class SelectionPanel : MonoBehaviour
     [SerializeField] private Menu _menu;
     [SerializeField] private Dropdown _dropdown;
     [SerializeField] private Text _startNode;
+    
     private Institution[] _institutions;
 
     #region MonoBehaviour
@@ -31,7 +32,6 @@ public class SelectionPanel : MonoBehaviour
         _dropdown.value = 0;
         _startNode.text = String.Empty;
     }
-
     
     private void FillDropdownList()
     {

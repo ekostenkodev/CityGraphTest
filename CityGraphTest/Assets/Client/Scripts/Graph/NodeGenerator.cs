@@ -5,6 +5,7 @@ using UnityEngine;
 public class NodeGenerator : MonoBehaviour
 {
     [SerializeField] private NodePresenter _nodePresenterPrefab;
+    
     private Transform _selfTransform;
     private List<Node> _nodes = new List<Node> ();
     private Institution[] _institutions;

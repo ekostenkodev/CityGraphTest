@@ -23,9 +23,7 @@ public class CityGenerator : MonoBehaviour
         CreateStartRoads(_startRoads);
 
         for (int i = 0; i < roadCount; i++)
-        {
             GenerateRandomRoadInPerimeter(_startRoads);
-        }
     }
 
     private void CreateStartRoads(Road[] roads)
@@ -52,7 +50,7 @@ public class CityGenerator : MonoBehaviour
         
         foreach (var edge in _edgeGenerator.Edges) 
         {
-            // проверяем, пересекается линия,созданная узлами startNode и endNode, с другими ветвями
+            // проверяем, пересекается ли линия, созданная узлами startNode и endNode, с другими ветвями
             if (Math2D.LineSegmentsIntersection(
                 road.Point1, 
                 road.Point2, 
@@ -79,7 +77,7 @@ public class CityGenerator : MonoBehaviour
                     continue;
                 }
 
-                // продолжаем строить дорогу на оставшихся участках (с помощью рекурсии)
+                // продолжаем строить дорогу на оставшихся участках
                 CreateEdgeOnRoad(new Road(road.Point1, intersectionPoint));
                 CreateEdgeOnRoad(new Road(road.Point2, intersectionPoint));
                 

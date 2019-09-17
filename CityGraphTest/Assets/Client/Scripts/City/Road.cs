@@ -2,8 +2,8 @@
 
 public class Road
 {
-    public Vector2 Point1;
-    public Vector2 Point2;
+    public readonly Vector2 Point1;
+    public readonly Vector2 Point2;
 
     public Road(Vector2 point1, Vector2 point2)
     {

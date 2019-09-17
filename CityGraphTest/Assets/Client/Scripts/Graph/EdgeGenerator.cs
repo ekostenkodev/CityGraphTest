@@ -5,6 +5,7 @@ using UnityEngine;
 public class EdgeGenerator : MonoBehaviour
 {
     [SerializeField] private EdgePresenter _edgePresenterPrefab;
+    
     private Transform _selfTransform;
     private List<Edge> _edges = new List<Edge>(); // все ветви, которые существуют
     

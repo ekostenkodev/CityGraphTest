@@ -7,11 +7,11 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class Navigator : MonoBehaviour
 {
-    public Node StartNode;
-    public Type TargetInstitution;
-
     private LineRenderer _lineRenderer;
     private Transform _transform;
+    
+    private Node _startNode;
+    private Type _targetInstitution;
     
     #region MonoBehaviour
 
@@ -26,7 +26,7 @@ public class Navigator : MonoBehaviour
     
     #endregion
 
-    public void HighlightTrack(List<Node> nodes)
+    private void HighlightTrack(List<Node> nodes)
     {
         _lineRenderer.enabled = true;
         _lineRenderer.positionCount = 0; // чистка списка
@@ -39,32 +39,32 @@ public class Navigator : MonoBehaviour
         
     }
 
-    public void SetStartNode(Node node)
+    private void SetStartNode(Node node)
     {
-        StartNode = node;
+        _startNode = node;
         GenerateTrack();
     }
 
-    public void SetTargetInstitution(Type type)
+    private void SetTargetInstitution(Type type)
     {
-        TargetInstitution = type;
+        _targetInstitution = type;
         GenerateTrack();
     }
 
     public void GenerateTrack()
     {
         _lineRenderer.enabled = false;
-        if(StartNode == null || TargetInstitution == null)
+        if(_startNode == null || _targetInstitution == null)
             return;
 
         Dijkstra dijkstra = new Dijkstra();
-        var list = dijkstra.FindWay(StartNode);
+        var list = dijkstra.FindWay(_startNode);
 
         Dijkstra.Vertex targetVertex = null;
 
         foreach (var item in list.OrderBy(v=>v.Length))
         {
-            if (item.Length != 0 && item.Node.Institution.GetType() == TargetInstitution)
+            if (item.Length != 0 && item.Node.Institution.GetType() == _targetInstitution)
             {
                 targetVertex = item;
                 break;
